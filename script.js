@@ -1,3 +1,5 @@
+// simple JS for easy development purposes
+// TODO: improve this after styles are done, and make accessible
 function addEvents() {
   const dropdowns = document.querySelectorAll(".dropdown");
   const navToggle = document.querySelector(".nav__toggle");
