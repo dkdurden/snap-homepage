@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+$ff: "Epilogue", sans-serif;
+
+$bg-light: hsl(0, 0%, 98%);
+$bg-gray: hsl(0, 0%, 41%);
+$bg-dark: hsl(0, 0%, 8%);
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+body {
+  font-family: $ff;
+  background-color: $bg-light;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  border: 0;
+  background: 0;
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.brand {
+  margin: 1.5rem 1rem;
+}
+
+.nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding-top: 3rem;
+  width: 250px;
+  height: 100%;
+  background-color: $bg-light;
+
+  // for development purposes
+  // border: 1px solid red;
+
+  &__auth {
+    padding: 0 1.5rem;
+
+    > a {
+      margin-bottom: 0.5rem;
+
+      &:hover {
+        color: $bg-dark;
+        border-color: $bg-dark;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: $bg-gray;
+
+    &:hover {
+      color: $bg-dark;
+      cursor: pointer;
+    }
+  }
+
+  &__toggle {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    margin: 1.5rem 1rem;
+  }
+}
+
+.dropdown {
+  &__menu {
+    display: none;
+    padding-left: 2rem;
+
+    &.show {
+      display: block;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    .nav__link {
+      padding-left: 0;
+    }
+  }
+
+  &__item-icon {
+    display: grid;
+    place-content: center;
+    width: 25px;
+    height: 25px;
+    margin-right: 0.5rem;
+
+    img {
+      // raise the icons up a little bit
+      margin-top: -3px;
+    }
+  }
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+.btn {
+  display: block;
+  padding: 0.5em 1em;
+  border: 2px solid $bg-gray;
+  border-radius: 10px;
+  color: $bg-gray;
+  text-align: center;
+
+  &--no-border {
+    @extend .btn;
+    border: 0;
+  }
+}

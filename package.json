@@ -1,0 +1,16 @@
+{
+  "name": "snap-homepage",
+  "version": "1.0.0",
+  "description": "![Design preview for the Intro section with dropdown navigation coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass style.scss style.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.55.0"
+  }
+}
