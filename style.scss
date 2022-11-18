@@ -38,6 +38,16 @@ a {
   text-decoration: none;
 }
 
+.header {
+  @media (min-width: 768px) {
+    display: flex;
+
+    &__col {
+      flex-grow: 1;
+    }
+  }
+}
+
 .brand {
   margin: 1.5rem 1rem;
 }
@@ -88,6 +98,27 @@ a {
     right: 0;
     margin: 1.5rem 1rem;
   }
+
+  @media (min-width: 768px) {
+    position: static;
+    display: flex;
+    height: auto;
+    width: auto;
+    padding-top: 0;
+
+    &__toggle {
+      display: none;
+    }
+
+    &__main {
+      display: flex;
+    }
+
+    &__auth {
+      display: flex;
+      align-items: center;
+    }
+  }
 }
 
 .dropdown {
@@ -126,6 +157,29 @@ a {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+  }
+
+  @media (min-width: 768px) {
+    &__menu {
+      position: absolute;
+      margin-left: -2.5rem;
+      padding: 1.25rem;
+      background-color: $bg-light;
+      border-radius: 10px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    &__menu#menu1 {
+      margin-left: -2.5rem;
+    }
+
+    &__menu#menu2 {
+      margin-left: 1.5rem;
+    }
+
+    &__menu .nav__link {
+      padding: 0.5rem 0;
+    }
   }
 }
 

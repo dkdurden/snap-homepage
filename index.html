@@ -27,14 +27,14 @@
     </style>
   </head>
   <body>
-    <header>
+    <header class="header">
       <!-- logo -->
       <div class="brand">
         <img src="/images/logo.svg" alt="" />
       </div>
 
       <!-- nav block -->
-      <nav>
+      <nav class="header__col">
         <!-- mobile menu toggle -->
         <button
           aria-label="Toggle nav menu"
@@ -46,13 +46,13 @@
         </button>
 
         <div class="nav" id="navMenu">
-          <ul>
+          <ul class="nav__main">
             <li class="dropdown">
               <button class="nav__link dropdown__toggle">
                 <span>Features</span>
                 <img src="/images/icon-arrow-down.svg" alt="" />
               </button>
-              <ul class="dropdown__menu">
+              <ul id="menu1" class="dropdown__menu">
                 <li class="dropdown__item">
                   <div class="dropdown__item-icon">
                     <img src="/images/icon-todo.svg" alt="" />
@@ -84,7 +84,7 @@
                 <span>Company</span
                 ><img src="/images/icon-arrow-down.svg" alt="" />
               </button>
-              <ul class="dropdown__menu">
+              <ul id="menu2" class="dropdown__menu">
                 <li class="dropdown__item">
                   <a href="" class="nav__link">History</a>
                 </li>
