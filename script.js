@@ -12,12 +12,10 @@ function addEvents() {
 
       if (isOpen) {
         menu.classList.remove("show");
-
-        icon.outerHTML = '<img src="/images/icon-arrow-down.svg" alt="" />';
+        icon.src = "/images/icon-arrow-down.svg";
       } else {
         menu.classList.add("show");
-
-        icon.outerHTML = '<img src="/images/icon-arrow-up.svg" alt="" />';
+        icon.src = "/images/icon-arrow-up.svg";
       }
     });
   });
