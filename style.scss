@@ -38,7 +38,14 @@ a {
   text-decoration: none;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .header {
+  margin: 0 2rem;
+
   @media (min-width: 768px) {
     display: flex;
 
@@ -49,7 +56,7 @@ a {
 }
 
 .brand {
-  margin: 1.5rem 1rem;
+  margin: 1.5rem 2rem 1.5rem 0;
 }
 
 .nav {
@@ -99,9 +106,10 @@ a {
     margin: 1.5rem 1rem;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 860px) {
     position: static;
     display: flex;
+    justify-content: space-between;
     height: auto;
     width: auto;
     padding-top: 0;
@@ -116,7 +124,13 @@ a {
 
     &__auth {
       display: flex;
+      gap: 1.5rem;
       align-items: center;
+      padding: 0;
+
+      > a {
+        margin-bottom: 0;
+      }
     }
   }
 }
