@@ -39,14 +39,14 @@ a {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
 .header {
   margin: 0 2rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 860px) {
     display: flex;
 
     &__col {
@@ -135,6 +135,98 @@ a {
   }
 }
 
+.main {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 1.5rem;
+
+  @media (min-width: 860px) {
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 3rem auto 0 auto;
+    padding: 0 2rem;
+  }
+}
+
+.content {
+  text-align: center;
+
+  &__heading {
+    @extend .content;
+    margin-top: 2.5rem;
+    font-size: 2.2rem;
+  }
+
+  &__body {
+    @extend .content;
+    padding: 0 1rem;
+    line-height: 1.5;
+    color: $bg-gray;
+  }
+
+  &__cta.btn {
+    margin: 1.5rem auto 3rem auto;
+    padding: 1rem 1.5rem;
+    background-color: $bg-dark;
+    color: $bg-light;
+    font-size: 1.1rem;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $bg-light;
+      color: $bg-dark;
+      border-color: $bg-gray;
+    }
+  }
+
+  @media (min-width: 860px) {
+    flex-basis: 60%;
+    text-align: start;
+
+    &__heading {
+      font-size: 4rem;
+    }
+
+    &__body {
+      padding-left: 0;
+      max-width: 45ch;
+    }
+
+    &__cta.btn {
+      margin: 2rem 0 5rem 0;
+    }
+  }
+}
+
+.graphic {
+  flex-basis: 40%;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media (min-width: 860px) {
+    flex-basis: 40%;
+  }
+}
+
+.clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+  padding: 0 1rem;
+
+  @media (min-width: 860px) {
+    justify-content: flex-start;
+    padding-left: 0;
+  }
+}
+
 .dropdown {
   &__menu {
     display: none;
@@ -173,7 +265,7 @@ a {
     gap: 0.5rem;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 860px) {
     &__menu {
       position: absolute;
       margin-left: -2.5rem;
@@ -201,12 +293,12 @@ a {
   display: block;
   padding: 0.5em 1em;
   border: 2px solid $bg-gray;
-  border-radius: 10px;
+  border-radius: 15px;
   color: $bg-gray;
   text-align: center;
 
   &--no-border {
     @extend .btn;
-    border: 0;
+    border-color: transparent;
   }
 }

@@ -122,15 +122,15 @@
     </div>
 
     <div class="container">
-      <main>
-        <div>
-          <h1>Make remote work</h1>
-          <p>
+      <main class="main">
+        <div class="content">
+          <h1 class="content__heading">Make remote work</h1>
+          <p class="content__body">
             Get your team in sync, no matter your location. Streamline
             processes, create team rituals, and watch productivity soar.
           </p>
-          <button>Learn more</button>
-          <div>
+          <button class="btn--no-border content__cta">Learn more</button>
+          <div class="clients">
             <img src="/images/client-databiz.svg" alt="" />
             <img src="/images/client-audiophile.svg" alt="" /><img
               src="/images/client-meet.svg"
@@ -139,8 +139,21 @@
             <img src="/images/client-maker.svg" alt="" />
           </div>
         </div>
-        <div>
-          <img src="/images/image-hero-mobile.png" alt="" />
+        <div class="graphic">
+          <picture>
+            <source
+              media="(min-width: 860px)"
+              srcset="/images/image-hero-desktop.png 960w"
+              width="960"
+              height="1280"
+            />
+            <source
+              srcset="/images/image-hero-mobile.png 750w"
+              width="750"
+              height="564"
+            />
+            <img src="/images/image-hero-mobile.png" alt="" />
+          </picture>
         </div>
       </main>
     </div>
