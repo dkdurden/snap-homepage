@@ -96,6 +96,10 @@ a {
       color: $bg-dark;
       cursor: pointer;
     }
+
+    &:focus {
+      outline: 1px solid black;
+    }
   }
 
   &__toggle {

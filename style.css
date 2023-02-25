@@ -83,6 +83,9 @@ a {
   color: hsl(0deg, 0%, 8%);
   cursor: pointer;
 }
+.nav__link:focus {
+  outline: 1px solid black;
+}
 .nav__toggle {
   position: fixed;
   z-index: 10;
